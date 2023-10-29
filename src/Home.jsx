@@ -24,10 +24,10 @@ function Home() {
       .get(apiUrl)
       .then((response) => {
         setData(response.data.Search);
-        console.log(response.data);
+       
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
+      
       });
   }, [title]);
 
@@ -42,12 +42,11 @@ function Home() {
         setgenre(response.data.Genre);
         setgenre(response.data.Genre);
         setlang(response.data.Language);
-        console.log(response.data);
 
         setrating(response.data.Ratings[0].Value);
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
+    
       });
   }, [title]);
 
@@ -79,7 +78,7 @@ function Home() {
       <div className="parentcont">
         {Data &&
           Data.map((movie, index) => (
-            <div className="maincont">
+            <div className="maincont" key={index}>
               <div className="title"><h1 key={index}>Movie:{movie.Title}</h1></div>
               <img
                 className="imgcont"
