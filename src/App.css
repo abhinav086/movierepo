@@ -12,6 +12,7 @@ justify-content: center;
 }
 
 .imgcont{
+    box-shadow: 3px 3px 8px black, -4px -6px 8px white;
     max-height: 300px;
     max-width: 200px;
     min-width: 200px;
@@ -28,7 +29,7 @@ h1{
     display: flex;
     justify-content: space-around;
 }
-.title{
+.maintitle{
     font-size: xx-large;
     text-transform: uppercase;
     text-align: center;
@@ -47,4 +48,18 @@ input{
 }
 input::placeholder{
     text-align: center;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.title{
+    max-width: 200px;
+    min-height: 100px;
+    padding: 1rem;
+    border-top: 1px solid black;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+    
 }

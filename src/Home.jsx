@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-function App() {
+function Home() {
   const [title, setTitle] = useState("");
   const [Data, setData] = useState([]);
   const [Moredata, setMoredata] = useState("");
@@ -62,7 +62,7 @@ function App() {
         />
       </h1>
       <div className="desbox">
-        <h1 className="title">{title == "" ? "Movie" : title}</h1>
+        <h1 className="maintitle">{title == "" ? "Movie" : title}</h1>
         <div className="des">
           <h1>Characters:{actors}</h1>
           <h1>Genre:{genre}</h1>
@@ -80,7 +80,7 @@ function App() {
         {Data &&
           Data.map((movie, index) => (
             <div className="maincont">
-              <h1 key={index}>Movie:{movie.Title}</h1>
+              <div className="title"><h1 key={index}>Movie:{movie.Title}</h1></div>
               <img
                 className="imgcont"
                 src={
@@ -96,4 +96,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
